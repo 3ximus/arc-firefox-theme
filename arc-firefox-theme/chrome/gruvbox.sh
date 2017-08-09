@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+#Convert arc colors into gruvbox colors
+
+# Arc colors
+## SCSS
+A_BASE="404552"
+A_TEXT="d3dae3"
+A_BG="383c4a"
+A_FG="$A_TEXT"
+A_SELECTED_FG="ffffff"
+A_SELECTED_BG="5294e2"
+A_WARNING="f27835"
+A_ERROR="fc4138"
+A_SUCCESS="73d216"
+A_DESTRUCTIVE="f04a50"
+A_SUGGESTED="4dadd4"
+A_DROP_TARGET="f08437"
+A_WM_BUTTON_CLOSE_BG="cc575d"
+A_WM_BUTTON_CLOSE_HOVER_BG="d7787d"
+A_WM_BUTTON_CLOSE_ACTIVE_BG="be3841"
+A_WM_ICON_CLOSE_BG="2f343f"
+A_WM_BUTTON_HOVER_BG="454c5c"
+A_WM_BUTTON_ACTIVE_BG="$A_SELECTED_BG"
+A_WM_BUTTON_HOVER_BORDER="262932"
+A_WM_ICON_BG="90939b"
+A_WM_ICON_UNFOCUSED_BG="666a74"
+A_WM_ICON_HOVER_BG="c4c7cc"
+A_WM_ICON_ACTIVE_BG="$A_SELECTED_FG"
+A_WINDOW_BG="353945"
+A_DARK_SIDEBAR_FG="bac3cf"
+A_ENTRY_BORDER="cfd6e6"
+## SVG
+A_BLUE="5294e2"
+A_WHITE="f9fafb"
+A_GREY="e7e8eb"
+A_DARK="383c4a"
+A_DARKEST="2f343f"
+A_DARKEST2="2f343d"
+A_DARK_BUTTON="353a47"
+A_LIGHT_BUTTON="2d323f"
+A_OTHER_LIGHT_BUTTON="444a58"
+A_MODAL="323644"
+A_ASSET_DARK="2e3340"
+A_ASSET_DARK2="313541"
+A_ASSET_GREY="bebebe"
+A_ASSET_BORDER="2c303a"
+A_ASSET_LIGHTER_BG="3e4350"
+A_ASSET_VARIOUS_DARK1="262934"
+A_ASSET_VARIOUS_DARK2="2d303b"
+A_ASSET_VARIOUS_DARK3="2d323d"
+A_GNOME_PANEL_BG="252a33"
+A_GNOME_PANEL_BORDER="0f1116"
+A_GTK2_TOOLBAR="70788d"
+A_GTK2_TOOLBAR_DARK="afb8c5"
+A_CLOSE_BUTTON_GREY="f8f8f9"
+A_DARK_BORDER="191919"
+
+# Gruvbox colors
+## Common
+S_YELLOW="d79921"
+S_ORANGE="d65d0e"
+S_RED="cc241d"
+S_MAGENTA="b16286"
+S_VIOLET="b16286"
+S_BLUE="458588"
+S_CYAN="689d6a"
+S_GREEN="98971a"
+## Dark
+S_BASE04="282828"
+S_BASE03="282828"
+S_BASE02="3c3836"
+S_BASE01="504945"
+S_BASE00="ebdbb2"
+S_BASE0="282828"
+S_BASE1="a89984"
+S_BASE2="ebdbb2"
+S_BASE3="fbf1c7"
+
+extensions="css scss svg xpm xml rc"
+ARC_COLORS=(      "$A_BASE"   "$A_TEXT"   "$A_BG"     "$A_FG"     "$A_SELECTED_FG" "$A_SELECTED_BG" "$A_WARNING" "$A_ERROR" "$A_SUCCESS" "$A_DESTRUCTIVE" "$A_SUGGESTED" "$A_DROP_TARGET" "$A_WM_BUTTON_CLOSE_BG" "$A_WM_BUTTON_CLOSE_HOVER_BG" "$A_WM_BUTTON_CLOSE_ACTIVE_BG" "$A_WM_ICON_CLOSE_BG" "$A_WM_BUTTON_HOVER_BG" "$A_WM_BUTTON_ACTIVE_BG" "$A_WM_BUTTON_HOVER_BORDER" "$A_WM_ICON_BG" "$A_WM_ICON_UNFOCUSED_BG" "$A_WM_ICON_HOVER_BG" "$A_WM_ICON_ACTIVE_BG" "$A_WINDOW_BG" "$A_DARK_SIDEBAR_FG" "$A_ENTRY_BORDER" "$A_BLUE" "$A_WHITE" "$A_GREY"  "$A_DARK"   "$A_DARKEST" "$A_DARKEST2" "$A_DARK_BUTTON" "$A_LIGHT_BUTTON" "$A_OTHER_LIGHT_BUTTON" "$A_MODAL"  "$A_ASSET_DARK" "$A_ASSET_DARK2" "$A_ASSET_GREY" "$A_ASSET_BORDER" "$A_ASSET_LIGHTER_BG" "$A_ASSET_VARIOUS_DARK1" "$A_ASSET_VARIOUS_DARK2" "$A_ASSET_VARIOUS_DARK3" "$A_GNOME_PANEL_BG" "$A_GNOME_PANEL_BORDER" "$A_GTK2_TOOLBAR" "$A_GTK2_TOOLBAR_DARK" "$A_CLOSE_BUTTON_GREY"  "$A_DARK_BORDER")
+GRUVBOX_COLORS=("$S_BASE02" "$S_BASE00" "$S_BASE03" "$S_BASE00" "$S_BASE3"       "$S_BLUE"        "$S_ORANGE"  "$S_RED"   "$S_GREEN"   "$S_RED"          "$S_CYAN"     "$S_YELLOW"      "$S_RED"                "$S_ORANGE"                   "$S_RED"                       "$S_BASE04"           "$S_BASE00"             "$S_BLUE"                "$S_BASE03"                 "$S_BASE1"      "$S_BASE00"               "$S_BASE1"            "$S_BASE3"             "$S_BASE02"    "$S_BASE00"          "$S_BASE00"       "$S_BLUE" "$S_BASE3" "$S_BASE2" "$S_BASE03" "$S_BASE04"  "$S_BASE04"   "$S_BASE03"      "$S_BASE02"       "$S_BASE02"             "$S_BASE03" "$S_BASE03"     "$S_BASE02"      "$S_BASE00"     "$S_BASE00"       "$S_BASE02"           "$S_BASE00"              "$S_BASE03"              "$S_BASE03"              "$S_BASE01"         "$S_BASE03"             "$S_BASE0"        "$S_BASE00"            "$S_BASE00" "$S_BASE01")
+
+CWD=`pwd`
+
+for filetype in $extensions	; do
+    echo "Replacing in ${filetype}"
+    for i in ${!ARC_COLORS[*]} ; do
+        find . -name "*.${filetype}" -exec sed -i "s/${ARC_COLORS[$i]}/${GRUVBOX_COLORS[$i]}/Ig" {} \;
+    done
+done
+
+cd browser/sass
+PATH=$PATH:/home/eximus/.gem/ruby/2.4.0/bin ./parse-sass.sh

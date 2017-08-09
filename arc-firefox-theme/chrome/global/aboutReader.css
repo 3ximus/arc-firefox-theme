@@ -12,7 +12,7 @@ body.loaded {
 
 body.light {
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fbf1c7;
 }
 
 body.dark {
@@ -21,7 +21,7 @@ body.dark {
 }
 
 body.dark *::-moz-selection {
-  background-color: #FFFFFF;
+  background-color: #fbf1c7;
   color: #0095DD;
 }
 body.dark a::-moz-selection {

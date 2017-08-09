@@ -39,7 +39,7 @@ colorpicker[type="button"] {
 }
 
 .colorpickertile[hover="true"] {
-  border: 2px dotted #FFFFFF;
+  border: 2px dotted #fbf1c7;
 }
 
 .cp-light[hover="true"] {

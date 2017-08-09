@@ -5,7 +5,7 @@
       display: none;
     }
     use {
-      fill: #ffffff;
+      fill: #fbf1c7;
     }
     use[id$="-hover"] {
       fill: #48a0f7;
@@ -17,7 +17,7 @@
       fill: #48a0f7;
     }
     use[id$="-disabled"] {
-      fill: #ffffff;
+      fill: #fbf1c7;
     }
   </style>
   <symbol id="fullscreen-shape">

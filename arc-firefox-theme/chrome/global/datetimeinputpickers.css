@@ -18,15 +18,15 @@
   --border-radius: 0.3rem;
   --border-active-color: #B1B1B1;
 
-  --font-color: #191919;
+  --font-color: #504945;
   --fill-color: #EBEBEB;
 
-  --selected-font-color: #FFFFFF;
+  --selected-font-color: #fbf1c7;
   --selected-fill-color: #0996F8;
 
   --button-font-color: #858585;
   --button-font-color-hover: #4D4D4D;
-  --button-font-color-active: #191919;
+  --button-font-color-active: #504945;
   --button-fill-color-active: #D4D4D4;
 
   --weekday-font-color: #6C6C6C;

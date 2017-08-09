@@ -3,7 +3,7 @@ AM_CFLAGS =
 
 light_guid = 52c2877e-44e1-11e5-8874-a62d1d5d46B0
 darker_guid = 8a01dfcc-450f-11e5-909b-fb581d5d46b0
-dark_guid = 03cb16aa-4675-11e5-b233-213b1d5d46b0
+dark_guid = 12b838d6-b436-41b8-8428-7dbcd488bce5
 
 lighttempdir = $(top_builddir)/arc-firefox-theme-light
 darkertempdir = $(top_builddir)/arc-firefox-theme-darker
@@ -40,10 +40,6 @@ if ENABLE_DARKER
 	rm -rf $(darkertempdir)/chrome/browser/sass
 	rm $(darkertempdir)/chrome/overrides.sh
 
-	sed -i 's/arc-theme/arc-darker-theme/' $(darkertempdir)/chrome.manifest
-	sed -i 's/arc-theme/arc-darker-theme/' $(darkertempdir)/install.rdf
-	sed -i 's/Arc /Arc Darker /' $(darkertempdir)/install.rdf
-
 	sed -i "s/$(light_guid)/$(darker_guid)/" $(darkertempdir)/install.rdf
 
 	cd $(darkertempdir) && \
@@ -58,10 +54,6 @@ if ENABLE_DARK
 	cp $(darktempdir)/chrome/browser/sass/browser-dark.css $(darktempdir)/chrome/browser/browser.css
 	rm -rf $(darktempdir)/chrome/browser/sass
 	rm $(darktempdir)/chrome/overrides.sh
-
-	sed -i 's/arc-theme/arc-dark-theme/' $(darktempdir)/chrome.manifest
-	sed -i 's/arc-theme/arc-dark-theme/' $(darktempdir)/install.rdf
-	sed -i 's/Arc /Arc Dark /' $(darktempdir)/install.rdf
 
 	sed -i "s/$(light_guid)/$(dark_guid)/" $(darktempdir)/install.rdf
 

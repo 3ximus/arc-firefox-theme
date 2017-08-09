@@ -9,11 +9,11 @@
 :root {
   --toolbarbutton-hover-background: #fbfbfc;
   --toolbarbutton-hover-boxshadow: none;
-  --toolbarbutton-hover-bordercolor: #cfd6e6;
+  --toolbarbutton-hover-bordercolor: #ebdbb2;
   --toolbarbutton-active-boxshadow: none;
-  --toolbarbutton-active-bordercolor: #5294E2;
-  --toolbarbutton-active-background: #5294E2;
-  --toolbarbutton-checkedhover-backgroundcolor: #5294E2;
+  --toolbarbutton-active-bordercolor: #458588;
+  --toolbarbutton-active-background: #458588;
+  --toolbarbutton-checkedhover-backgroundcolor: #458588;
   --toolbarbutton-combined-boxshadow: none;
   --toolbarbutton-combined-backgroundimage: linear-gradient(rgba(23, 51, 79, 0.2) 0, rgba(23, 51, 79, 0.2) 18px);
   --verified-identity-box-backgroundcolor: transparent;
@@ -143,13 +143,13 @@ toolbarbutton.bookmark-item:not([disabled=true]):hover {
   -moz-appearance: none;
   color: #5c616c;
   background-color: white;
-  border: 1px solid #cfd6e6; }
+  border: 1px solid #ebdbb2; }
 
 toolbarbutton.bookmark-item:not([disabled=true]):-moz-any([open], [checked], :hover:active) {
   -moz-appearance: none;
-  color: #ffffff;
-  background-color: #5294E2;
-  border: 1px solid #5294E2; }
+  color: #fbf1c7;
+  background-color: #458588;
+  border: 1px solid #458588; }
 
 /* ----- BOOKMARK STAR ANIMATION ----- */
 @keyframes animation-bookmarkAdded {
@@ -378,9 +378,9 @@ menuitem.bookmark-item {
 #TabsToolbar .toolbarbutton-1:not([disabled=true]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack,
 #TabsToolbar .toolbarbutton-1:not([disabled=true]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon {
   background: none;
-  color: #ffffff;
-  border-color: #5294E2;
-  background-color: #5294E2;
+  color: #fbf1c7;
+  border-color: #458588;
+  background-color: #458588;
   background-clip: padding-box; }
 
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[checked]:not(:active):hover > .toolbarbutton-icon {
@@ -943,14 +943,14 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   margin: 0 3px;
   min-height: 28px;
   color: #5c616c;
-  background-color: #ffffff;
-  border: 1px solid #cfd6e6; }
+  background-color: #fbf1c7;
+  border: 1px solid #ebdbb2; }
 
 #urlbar[focused],
 .searchbar-textbox[focused] {
   color: #5c616c;
-  background-color: #ffffff;
-  border: 1px solid #5294E2; }
+  background-color: #fbf1c7;
+  border: 1px solid #458588; }
 
 .searchbar-textbox {
   border-radius: 20px;
@@ -2016,25 +2016,25 @@ html|span.ac-emphasize-text-url {
 .browserContainer > findbar .findbar-textbox {
   -moz-appearance: none;
   color: #5c616c;
-  border: 1px solid #cfd6e6;
-  background-color: #ffffff;
+  border: 1px solid #ebdbb2;
+  background-color: #fbf1c7;
   box-shadow: none;
   margin: 0;
   padding: 5px;
   width: 14em; }
   .browserContainer > findbar .findbar-textbox[focused="true"] {
-    border-color: #5294E2; }
+    border-color: #458588; }
     .browserContainer > findbar .findbar-textbox[focused="true"] + .findbar-find-previous {
-      border-left-color: #5294E2; }
+      border-left-color: #458588; }
   .browserContainer > findbar .findbar-textbox[status="notfound"] {
-    background-color: #FC4138;
+    background-color: #cc241d;
     border-color: #fb1b10;
-    color: #ffffff;
+    color: #fbf1c7;
     box-shadow: none; }
   .browserContainer > findbar .findbar-textbox[flash="true"] {
-    background-color: #F27835;
+    background-color: #d65d0e;
     border-color: #ef5f0f;
-    color: #ffffff;
+    color: #fbf1c7;
     box-shadow: none; }
   .browserContainer > findbar .findbar-textbox:-moz-locale-dir(ltr) {
     border-radius: 3px 0 0 3px;
@@ -2049,7 +2049,7 @@ html|span.ac-emphasize-text-url {
 .browserContainer > findbar .findbar-find-previous,
 .browserContainer > findbar .findbar-find-next {
   background: #fbfbfc;
-  border: 1px solid #cfd6e6;
+  border: 1px solid #ebdbb2;
   box-shadow: none; }
 
 .browserContainer > findbar .findbar-find-previous {
@@ -2064,8 +2064,8 @@ html|span.ac-emphasize-text-url {
 .browserContainer > findbar .findbar-find-previous:not([disabled]):active,
 .browserContainer > findbar .findbar-find-next:not([disabled]):active {
   outline-color: rgba(255, 255, 255, 0.3);
-  background: #5294E2;
-  border-color: #5294E2;
+  background: #458588;
+  border-color: #458588;
   box-shadow: none; }
 
 /* Tabstrip */
@@ -2460,7 +2460,7 @@ lwtHeader;*/
 #TabsToolbar:not(:-moz-lwtheme) {
   -moz-appearance: none;
   color: rgba(82, 93, 118, 0.8);
-  background: #e7e8eb; }
+  background: #ebdbb2; }
 
 #toolbar-menubar:not([autohide="true"]):not(:-moz-lwtheme):-moz-system-metric(menubar-drag),
 #TabsToolbar:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -2591,10 +2591,10 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 .statuspanel-label {
   margin: 0;
   padding: 2px 4px;
-  background: #5294E2;
-  border: 1px none #5294E2;
+  background: #458588;
+  border: 1px none #458588;
   border-top-style: solid;
-  color: #ffffff;
+  color: #fbf1c7;
   text-shadow: none; }
 
 .statuspanel-label:-moz-locale-dir(ltr):not([mirror]),
@@ -2611,7 +2611,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 
 html|*.pointerlockfswarning {
   align-items: center;
-  color: #BAC3CF;
+  color: #ebdbb2;
   background: rgba(53, 57, 69, 0.95);
   border: 1px solid rgba(31, 33, 40, 0.95);
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
@@ -2894,7 +2894,7 @@ html|*.pointerlockfswarning-exit-button {
   border-radius: 25px / 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fbf1c7;
   border-bottom-width: 0;
   background-color: #353535;
   box-shadow: 0 3px 0.7px 1px #777777, 0 5px rgba(0, 0, 0, 0.4) inset;
@@ -2904,7 +2904,7 @@ html|*.pointerlockfswarning-exit-button {
 .devtools-responsiveui-hardware-buttons {
   -moz-appearance: none;
   padding: 20px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fbf1c7;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border-top-width: 0;
@@ -2977,7 +2977,7 @@ html|*.pointerlockfswarning-exit-button {
   /* --theme-tab-toolbar-background */
   --gcli-input-background: #fcfcfc;
   /* --theme-toolbar-background */
-  --gcli-input-focused-background: #ffffff;
+  --gcli-input-focused-background: #fbf1c7;
   /* --theme-sidebar-background */
   --gcli-input-color: #393f4c;
   /* --theme-body-color */
